@@ -1,132 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Hannah Zhu Index</title>
-    <!-- css! -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PBJ Homepage</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-      /* credits to google fonts */
-      @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
-      /* credits to google fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+      html,
       body {
-        background-color: aliceblue;
-        margin-left: 120px;
-        margin-right: 120px;
+        font-family: "Inter";
       }
       h1 {
-        font-family: Georgia, "Times New Roman", Times, serif;
-        color: red;
-        background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-34-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=89288ef4b47127f7f34a5998b50e4470);
-        text-align: center;
+        font-weight: bold;
       }
-      h2 {
-        font-family: 'Itim', cursive;
-        color: purple;
-        text-align: left;
+      .home {
+        margin-left: 5vh;
+        margin-right: 5vh;
+        margin-top: 10vh;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
       }
-      h3 {
-        font-family: "Dancing Script", cursive;
-        color: blue;
-        text-align: center;
+
+      .nav {
+        display: flex;
+        justify-content: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+        margin-top: 5px;
+        font-weight: bold;
+        align-items: end;
+        flex-wrap: nowrap;
       }
-      p {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        color: cornflowerblue;
-        font-size: 1.2em;
-        text-indent: 30px;
+
+      .item {
+        margin-left: 5px;
+        margin-right: 5px;
       }
-      img {
-        float: left;
-        margin: 20px;
-        z-index: -100;
-        box-shadow: 10px 10px #9b3971;
-        /* box shadow css property learned from https://w3schools.com */
+
+      img.logo {
+        display: inline-block;
+        height: 8vh;
+        margin-top: 10px;
+
       }
-      a {
+
+      .pbj-index {
+        font-size: 20px;
+      }
+
+      .divider {
+        width: 20%;
+      }
+
+      a:link,
+      a:visited{
         text-decoration: none;
-        color: red;
+        color: black;
       }
-      .links {
-        text-align: center;
+
+      a:hover {
+        color: #7a4081;
+      }
+
+      .logo:hover {
+        text-decoration: none;
+        color: black
+      }
+
+      .PBJ {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 30%;
+      }
+
+      .button-container {
+        display: flex;
+        justify-self: row;
+        margin-right: 5px;
+      }
+
+      .button {
+        width: 50px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .team {
+        width: 70vh;
+      }
+      .screen {
+        margin-left: 5vh;
+        margin-right: 5vh;
+      }
+
+      .create {
+        margin-top: 15vh;
       }
     </style>
   </head>
   <body>
-    <!-- part 1: heading-->
-    <h1>All About Hannah</h1>
-    <hr >
+    <div class="screen">
+      <div class="nav">
+        <div class="item logo">
+          <a href="index.html"
+            ><img class="logo" src="images/pbjlogo.png" alt="pbj logo"
+          /></a>
+          <a href="index.html" class="pbj-index"
+            >Product, Building, &amp; Jammin&apos;</a
+          >
+        </div>
 
-    <!-- part 2: quick links -->
-    <h2>Quick Links</h2>
-    <a href="#aboutme">About Me</a> <br >
-    <a href="#hobbies">My Interests/Hobbies</a> <br >
-    <a href="#contact">Contact Information</a> <br >
-    <a href="/sitemap.html">Portfolio</a>
+        <div class="divider"></div>
 
-    <!-- part 3: about me -->
-    <h2>About Me</h2>
-    <a id="aboutme"></a>
-    <p>
-      Hi! My name is Hannah, and I'm a sophomore at Babson College from Sharon,
-      MA. I enjoy painting pretty pictures, listening to good music, and chasing
-      sunrises. I love hanging out with my friends and eating good food around
-      Boston.
-    </p>
-    <img
-      id="hannah"
-      src="/images/hannah.JPG"
-      alt="Hannah's Profile"
-      height="80"
-    >
+        <div class="item"><a href="about.html">About</a></div>
+        <div class="item"><a href="events.html">Events</a></div>
+        <div class="item"><a href="gallery.html">Gallery</a></div>
+        <div class="item"><a href="resources.html">Resources</a></div>
+        <div class="item"><a href="contact.html">Contact</a></div>
+      </div>
+      <div class="home">
+        <div class="PBJ">
+          <h1>Hi, we&apos;re PB&J.</h1>
+          <p>
+            Product, Building, & Jamming: Babson&apos;s first product
+            management, design, and programming club, providing innovative
+            students the resources to take the leap into tech.
+          </p>
+          <div class="button-container">
+            <a href="https://www.instagram.com/babsonpbj/" target="_blank"
+              ><img src="images/ig-button.png" alt="instagram" class="button"
+            /></a>
+            <a href="https://discord.gg/uJj9f2bAvU" target="_blank"
+              ><img
+                src="images/discord-button.png"
+                target="_blank"
+                alt="discord"
+                class="button"
+            /></a>
+            <a
+              href="https://babsonpbj.notion.site/PB-J-Homepage-9182c438b03443f48b60845c95f9d4f5"
+              target="_blank"
+              ><img src="images/notion-button.png" alt="email" class="button"
+            /></a>
+            <a href="mailto:babsonpbj@gmail.com"
+              ><img src="images/email.png" alt="email" class="button"
+            /></a>
+          </div>
+          <div class="create">
+            <a href="https://tally.so/r/mYj7Kv" target="_blank"
+              ><img src="images/createbutton.png" alt="create button"
+            /></a>
+          </div>
+        </div>
 
-    <p>
-      At <a href="https://babson.edu" target="_blank">Babson College</a>, I am a
-      part of the Delta Sigma Pi (&Delta;&sum;&prod;) business fraternity,
-      Babson Asian Pacific Student Association, and Product, Building, and
-      Jamming. I chose Babson because I wanted to build businesses alongside my
-      interpersonal and professional skillsets.
-    </p>
-    <!-- delta, sigmai, pi, symbol entities from https://W3School.com -->
-    <br >
-    <br >
-    <!-- part 4: my hobbies/interests -->
-    <h2>My Hobbies/Interests</h2>
-    <a id="hobbies"></a>
-
-    <img
-      id="lillies"
-      src="https://media.overstockart.com/optimized/cache/data/product_images/MON1239-1000x1000.jpg"
-      alt="Monet Water Lillies"
-      height="80"
-    >
-
-    <p>
-      My hobbies include creating various kinds of arts and crafts projects. I
-      like starting new creative pieces when I'm bored, and as presents for my
-      friends. My favorite artist is
-      <a href="https://en.wikipedia.org/wiki/Claude_Monet" target="_blank">
-        Claude Monet</a
-      >, and his Water Lillies series. In his words, &quot;The richness I
-      achieve comes from nature, the source of my inspiration. &quot;
-    </p>
-    <!-- double quotation html entity is from https://W3schools.com -->
-    <br>
-    <hr>
-
-    <!-- part 5: contact information -->
-    <h3>Contact Information</h3>
-    <a id="contact"></a>
-    <p>
-      Hannah Zhu, Web Technologies SP2023; get to know me by clicking the links below!
-    </p>
-    <div class="links">
-      <a href="https://github.com/haniicorn">GitHub |</a>
-      <a href="https://hannahzhu.webflow.io">Portfolio |</a>
-      <a href="mailto:hzhu2@babson.edu">Email Me! |</a>
-      <a href="sitemap.html">Sitemap |</a>
+        <div>
+          <img src="images/pbj team pic.png" alt="team-pic" class="team" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
