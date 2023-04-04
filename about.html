@@ -1,13 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-</head>
-<body>
-    <h1>this is the pb&j about page</h1>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+      html,
+      body {
+        font-family: "Inter";
+        line-height: 30px;
+      }
+      h1 {
+        font-weight: bold;
+        text-align: center;
+      }
+      p, ol{
+        font-size: 18px;
+
     
-</body>
+      }
+      .nav {
+        display: flex;
+        justify-content: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+        margin-top: 5px;
+        font-weight: bold;
+        align-items: end;
+        flex-wrap: nowrap;
+      }
+
+      .item {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      img.logo {
+        display: inline-block;
+        height: 8vh;
+        margin-top: 10px;
+      }
+      .divider {
+        width: 20%;
+      }
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: black;
+      }
+
+      a:hover {
+        color: #7a4081;
+      }
+
+      .text {
+        background-color: #bd8f5b;
+        border-radius: 25px;
+
+        padding: 10px 50px 15px 100px;
+        margin-left: -30px;
+        margin-top: 5vh;
+        width: 75%;
+      }
+
+      .mission {
+        margin-top: 10px;
+        padding-bottom: 5vh;
+      }
+
+      .aboutpics {
+        display: absolute;
+        width: 50vh;
+        float: right;
+        margin-right: 12vh;
+        margin-bottom: 5vh;
+        margin-top: -35vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="item logo">
+        <a href="index.html"
+          ><img class="logo" src="images/pbjlogo.png" alt="pbj logo"
+        /></a>
+        <a href="index.html" class="pbj-index"
+          >Product, Building, &amp; Jammin&apos;</a
+        >
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="item active"><a href="about.html">About</a></div>
+      <div class="item"><a href="events.html">Events</a></div>
+      <div class="item"><a href="gallery.html">Gallery</a></div>
+      <div class="item"><a href="resources.html">Resources</a></div>
+      <div class="item"><a href="contact.html">Contact</a></div>
+    </div>
+
+    <div class="text about">
+      <h1>🥜 About PB&amp;J:</h1>
+      <p>
+        Babson&apos;s first product management, design and programming club,
+        providing innovative students with resources to take the leap into tech.
+      </p>
+    </div>
+
+    <div class="text mission">
+      <h1>🍇 Our Mission</h1>
+      <ol class="missionlist">
+        <li>
+          <strong>Growth — </strong> to provide resources and opportunities to
+          foster growth in technical product design, development, and
+          management. Resources will come through the mentorship of alumni in
+          those fields and workshops from our members.
+        </li>
+        <li>
+          <strong>Network — </strong>to expand and connect a network of Babson
+          students, alumni, and faculty looking to join, explore, or grow in
+          technical product design, development, and management.
+        </li>
+        <li>
+          <strong>Design thinking and ideation — </strong>to problem-solve
+          through concrete actions to design and develop usable, enjoyable, and
+          accessible products that provide value to users.
+        </li>
+        <li>
+          <strong>Obtaining skills — </strong>to hold each member of the club
+          accountable for reaching their end-of-semester deliverables on their
+          projects either in design or software engineering.
+        </li>
+      </ol>
+    </div>
+    <img src="images/pbjabout.png" alt="about pbj pics" class="aboutpics" />
+    <!-- <div class="uncrusties">
+        <h2>Meet the Uncrusties!</h2>
+        div
+
+    </div>
+    <div class="mentors">
+        <h2>Meet the Mentors!</h2> -->
+
+    </div>
+  </body>
 </html>
