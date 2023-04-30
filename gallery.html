@@ -1,13 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
-</head>
-<body>
-    <h1>this is the pb&j gallery page</h1>
-    
-</body>
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="icon" href="images/pbjlogo.png" sizes="300x300" />
+
+    <style>
+      body {
+        padding: 10vh;
+        background-color: #d4a37f;
+      }
+      h1 {
+        text-align: left;
+        color: #7f422c;
+      }
+
+      h4{
+        font-style: italic;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-areas:
+          "desc desc desc"
+          "pic1 pic2 pic3"
+          "pic4 pic5 pic6";
+        overflow: hidden;
+
+        padding: 5px;
+        margin-left: 5vh;
+        margin-right: 5vh;
+        flex-wrap: wrap;
+      }
+
+      .item2 img {
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        border: 2px solid #d4a37f;
+        border-radius: 25px;
+      }
+
+      .pic1 {
+        grid-area: pic1;
+      }
+      .pic2 {
+        grid-area: pic2;
+      }
+      .pic3 {
+        grid-area: pic3;
+      }
+      .pic4 {
+        grid-area: pic4;
+      }
+      .pic5 {
+        grid-area: pic5;
+      }
+      .pic6 {
+        grid-area: pic6;
+      }
+      .desc{
+        grid-area: desc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="item logo">
+        <a href="index.html"
+          ><img class="logo" src="images/pbjlogo.png" alt="pbj logo"
+        /></a>
+        <a href="index.html" class="pbj-index"
+          >Product, Building, &amp; Jammin&apos;</a
+        >
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="item"><a href="about.html">About</a></div>
+      <div class="item"><a href="events.html">Events</a></div>
+      <div class="item"><a href="gallery.html">Gallery</a></div>
+      <div class="item"><a href="resources.html">Resources</a></div>
+      <div class="item"><a href="contact.html">Contact</a></div>
+      <div class="item"><a href="sitemap.html">Sitemap</a></div>
+    </div>
+
+    <div class="container">
+      <div class="desc">
+        <h1>📸 Gallery</h1>
+        <h4>Past projects and events will be displayed here.</h4>
+      </div>
+      <div class="item2 pic1">
+        <img src="images/pbjpic1.jpg" alt="pbj" title="Workshop Day" />
+      </div>
+      <div class="item2 pic2">
+        <img src="images/pbjpic2.jpg" alt="pbj" title="Workshop Day" />
+      </div>
+      <div class="item2 pic3">
+        <img src="images/pbjpic3.jpg" alt="pbj" title="Workshop Day" />
+      </div>
+      <div class="item2 pic4">
+        <img src="images/pbjpic4.jpg" alt="pbj" title="Workshop Day" />
+      </div>
+      <div class="item2 pic5">
+        <img src="images/pbjpic5.jpg" alt="pbj" title="Workshop Day" />
+      </div>
+      <div class="item2 pic6">
+        <img src="images/pbjpic6.jpg" alt="pbj" title="Workshop Day" />
+      </div>
+    </div>
+  </body>
 </html>

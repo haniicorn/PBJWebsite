@@ -1,13 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resources</title>
-</head>
-<body>
-    <h1>this is the pb&j resources page</h1>
-    
-</body>
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="icon" href="images/pbjlogo.png" sizes="300x300" />
+
+    <style>
+      .container {
+        display: flex;
+        /* margin-left: 5vh;
+        margin-right: 5vh; */
+        /* margin-top: 15vh; */
+        text-align: center;
+        justify-content: center;
+      }
+      .resource {
+        padding: 5vh;
+      }
+
+      .design {
+        background-color: #c5b0d2;
+        width: 100%;
+
+      }
+
+      .design h1 {
+        color: #7a4081;
+      }
+
+      .programming {
+        background-color: #d4a37f;
+        width: 100%;
+      }
+
+      .programming h1 {
+        color: #7f422c;
+      }
+      img {
+        height: 60vh;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="item logo">
+        <a href="index.html"
+          ><img class="logo" src="images/pbjlogo.png" alt="pbj logo"
+        /></a>
+        <a href="index.html" class="pbj-index"
+          >Product, Building, &amp; Jammin&apos;</a
+        >
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="item"><a href="about.html">About</a></div>
+      <div class="item"><a href="events.html">Events</a></div>
+      <div class="item"><a href="gallery.html">Gallery</a></div>
+      <div class="item"><a href="resources.html">Resources</a></div>
+      <div class="item"><a href="contact.html">Contact</a></div>
+      <div class="item"><a href="sitemap.html">Sitemap</a></div>
+    </div>
+
+    <div class="container">
+      <div class="resource programming">
+        <h1>Programming Resources</h1>
+        <!-- <h4>Programming is</h4> -->
+        <div id="peanutimg">
+          <img
+            src="images/peanut.png"
+            alt="peanutbutter"
+            title="peanutbutter"
+          />
+        </div>
+        <div id="presources">
+          <div>
+            <a href="https://javascript30.com/">30 Days of JS Challenges</a>
+          </div>
+          <div>
+            <a href="https://tutorial.djangogirls.org/en/">Django Girls</a>
+          </div>
+          <div>
+            <a href="https://github.com/pittcsc/Summer2023-Internships">Programming Internships</a>
+          </div>
+        </div>
+      </div>
+      <div class="resource design">
+        <h1>Design Resources</h1>
+        <!-- <h4>Design is</h4> -->
+        <div id="jellyimg">
+          <img src="images/jelly.png" alt="jelly" title="jelly" />
+        </div>
+        <div id="dresources">
+          <div>
+            <a href="https://www.designbuddies.community/">Design Buddies</a>
+          </div>
+          <div><a href="https://docs.google.com/document/d/15PkJm4uJmaK5ehOoW0TnTaOVgDh9BJwOgpv9mYvBPpE/preview#">Olivia Trong's Design Starter Kit</a></div>
+          <div>
+            <a href="https://github.com/m-deng1928/UX_Opportunities">Design Internships</a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

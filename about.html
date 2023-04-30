@@ -5,80 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="icon" href="images/pbjlogo.png" sizes="300x300" />
+
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
-      html,
       body {
-        font-family: "Inter";
-        line-height: 30px;
+        background-color: #7a4081;
       }
-      h1 {
-        font-weight: bold;
-        text-align: center;
-      }
-      p, ol{
-        font-size: 18px;
-
-    
-      }
-      .nav {
-        display: flex;
-        justify-content: row;
-        justify-content: space-around;
-        align-items: center;
-        align-content: stretch;
-        margin-top: 5px;
-        font-weight: bold;
-        align-items: end;
-        flex-wrap: nowrap;
-      }
-
-      .item {
-        margin-left: 5px;
-        margin-right: 5px;
-      }
-
-      img.logo {
-        display: inline-block;
-        height: 8vh;
-        margin-top: 10px;
-      }
-      .divider {
-        width: 20%;
-      }
-
-      a:link,
-      a:visited {
-        text-decoration: none;
-        color: black;
-      }
-
-      a:hover {
-        color: #7a4081;
-      }
-
       .text {
-        background-color: #bd8f5b;
-        border-radius: 25px;
-
-        padding: 10px 50px 15px 100px;
-        margin-left: -30px;
-        margin-top: 5vh;
-        width: 75%;
+        text-align: center;
+        color: #fff;
       }
+
+      .about {
+        padding-top: 40vh;
+        padding-bottom: 30vh;
+        background-image: url(images/pbjpic2.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+
 
       .mission {
-        margin-top: 10px;
-        padding-bottom: 5vh;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
       }
-
-      .aboutpics {
-        display: absolute;
-        width: 50vh;
-        float: right;
-        margin-right: 12vh;
-        margin-bottom: 5vh;
-        margin-top: -35vh;
+      h1 {
+        color: #a5634c;
+        font-size: 40px;        
+      }
+      h1.mission {
+        color: #d4a37f;
+      }
+      p {
+        margin-left: 40vh;
+        margin-right: 40vh;
+        opacity: 1;
+        font-weight: bold;
+        background-color: #a5634c;
+        border-radius: 25px;
+        padding: 10px;
+      }
+      li {
+        margin-left: 50vh;
+        margin-right: 50vh;
+        line-height: 250%;
+        letter-spacing: 4%;
+        text-align: left;
       }
     </style>
   </head>
@@ -95,23 +68,25 @@
 
       <div class="divider"></div>
 
-      <div class="item active"><a href="about.html">About</a></div>
+      <div class="item"><a href="about.html">About</a></div>
       <div class="item"><a href="events.html">Events</a></div>
       <div class="item"><a href="gallery.html">Gallery</a></div>
       <div class="item"><a href="resources.html">Resources</a></div>
       <div class="item"><a href="contact.html">Contact</a></div>
+      <div class="item"><a href="sitemap.html">Sitemap</a></div>
     </div>
 
     <div class="text about">
-      <h1>🥜 About PB&amp;J:</h1>
+      <h1>🥜 About Us</h1>
       <p>
-        Babson&apos;s first product management, design and programming club,
-        providing innovative students with resources to take the leap into tech.
+        Product, Building, &amp; Jammin&apos; is Babson&apos;s first product
+        management, design and programming club, providing innovative students
+        with resources to take the leap into tech.
       </p>
     </div>
 
     <div class="text mission">
-      <h1>🍇 Our Mission</h1>
+      <h1 class="mission">🍇 Our Mission</h1>
       <ol class="missionlist">
         <li>
           <strong>Growth — </strong> to provide resources and opportunities to
@@ -135,16 +110,6 @@
           projects either in design or software engineering.
         </li>
       </ol>
-    </div>
-    <img src="images/pbjabout.png" alt="about pbj pics" class="aboutpics" />
-    <!-- <div class="uncrusties">
-        <h2>Meet the Uncrusties!</h2>
-        div
-
-    </div>
-    <div class="mentors">
-        <h2>Meet the Mentors!</h2> -->
-
     </div>
   </body>
 </html>

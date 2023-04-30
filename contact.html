@@ -1,13 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-</head>
-<body>
-    <h1>this is the pb&j contact page</h1>
-    
-</body>
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="icon" href="images/pbjlogo.png" sizes="300x300" />
+
+    <style>
+      body,
+      html {
+        background-color: #d4a37f;
+        height: 75%;
+      }
+      .form {
+        background-color: #d4a37f;
+        width: 100vh;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        margin-top: 15vh;
+        border-radius: 25px;
+      }
+      form {
+        font-weight: bold;
+      }
+      h1 {
+        text-align: left;
+        color: #7f422c;
+      }
+      button {
+        padding: 10px;
+        border-radius: 15px;
+        margin-top: 10px;
+      }
+      #submit-btn {
+        background-color: #7a4081;
+        color: #f7f7f7;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="item logo">
+        <a href="index.html"
+          ><img class="logo" src="images/pbjlogo.png" alt="pbj logo"
+        /></a>
+        <a href="index.html" class="pbj-index"
+          >Product, Building, &amp; Jammin&apos;</a
+        >
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="item"><a href="about.html">About</a></div>
+      <div class="item"><a href="events.html">Events</a></div>
+      <div class="item"><a href="gallery.html">Gallery</a></div>
+      <div class="item"><a href="resources.html">Resources</a></div>
+      <div class="item"><a href="contact.html">Contact</a></div>
+      <div class="item"><a href="sitemap.html">Sitemap</a></div>
+    </div>
+
+    <div class="form">
+      <h1>📧 Contact Us</h1>
+      <div>
+        <label for="fname-input">First Name:</label>
+        <input
+          type="text"
+          placeholder="First Name"
+          id="fname-input"
+          name="First Name"
+        />
+      </div>
+
+      <div>
+        <label for="lname-input">Last Name:</label>
+
+        <input
+          type="text"
+          placeholder="Last Name"
+          id="lname-input"
+          name="Last Name"
+        />
+      </div>
+
+      <div>
+        <label for="email-input">Email:</label>
+        <input
+          type="text"
+          placeholder="example@example.com"
+          id="email-input"
+          name="Email"
+        />
+      </div>
+
+      <div>Subject:</div>
+      <div>
+        <input type="radio" id="question" name="subject" value="question" />
+        <label for="HTML">Question</label>
+      </div>
+      <div>
+        <input type="radio" id="feedback" name="subject" value="feedback" />
+        <label for="feedback">Feedback</label>
+      </div>
+      <div>
+        <input type="radio" id="issue" name="subject" value="issue" />
+        <label for="issue">Issue</label>
+      </div>
+      <div>
+        <input type="radio" id="other" name="subject" value="other" />
+        <label for="other">Other</label>
+      </div>
+
+      <div>
+        <div>
+          <label for="comments">Leave a reply:</label>
+        </div>
+        <div>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="8"
+            cols="75"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+      </div>
+
+      <div>
+        <button type="submit" id="submit-btn">SUBMIT</button>
+        <button type="reset" id="reset-btn">RESET</button>
+      </div>
+    </div>
+  </body>
 </html>

@@ -5,70 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PBJ Homepage</title>
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="icon" href="images/pbjlogo.png" sizes="300x300"/>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
-      html,
-      body {
-        font-family: "Inter";
-      }
-      h1 {
-        font-weight: bold;
-      }
-      .home {
-        margin-left: 5vh;
-        margin-right: 5vh;
-        margin-top: 10vh;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-      }
-
-      .nav {
-        display: flex;
-        justify-content: row;
-        justify-content: space-around;
-        align-items: center;
-        align-content: stretch;
-        margin-top: 5px;
-        font-weight: bold;
-        align-items: end;
-        flex-wrap: nowrap;
-      }
-
-      .item {
-        margin-left: 5px;
-        margin-right: 5px;
-      }
-
-      img.logo {
-        display: inline-block;
-        height: 8vh;
-        margin-top: 10px;
-      }
-
-      .pbj-index {
-        font-size: 20px;
-      }
-
-      .divider {
-        width: 20%;
-      }
-
-      a:link,
-      a:visited {
-        text-decoration: none;
-        color: black;
-      }
-
-      a:hover {
-        color: #7a4081;
-      }
-
-      .logo:hover {
-        text-decoration: none;
-        color: black;
-      }
-
       .PBJ {
         display: flex;
         flex-direction: column;
@@ -86,18 +25,42 @@
         width: 50px;
         margin-left: 5px;
         margin-right: 5px;
+        margin-top: 20px;
       }
 
       .team {
         width: 70vh;
       }
       .screen {
-        margin-left: 5vh;
-        margin-right: 5vh;
+        margin-left: 10vh;
+        margin-right: 10vh;
       }
 
       .create {
         margin-top: 15vh;
+        width: 40vh;
+        background-color: #7A4081;
+        padding: 20px;
+        border-radius: 25px;
+      }
+
+      .create a{
+        color: #f7f7f7;
+        text-align: right;
+        font-size: 23px;
+      }
+
+      .home {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 3vh;
+        margin-right: 3vh;
+        justify-content: space-around;
+        margin-top: 15vh;
+      }
+
+      h1{
+        font-size: 40px;
       }
     </style>
   </head>
@@ -120,6 +83,7 @@
         <div class="item"><a href="gallery.html">Gallery</a></div>
         <div class="item"><a href="resources.html">Resources</a></div>
         <div class="item"><a href="contact.html">Contact</a></div>
+        <div class="item"><a href="sitemap.html">Sitemap</a></div>
       </div>
       <div class="home">
         <div class="PBJ">
@@ -151,8 +115,8 @@
           </div>
           <div class="create">
             <a href="https://tally.so/r/mYj7Kv" target="_blank"
-              ><img src="images/createbutton.png" alt="create button"
-            /></a>
+              >Come create with us &nbsp; &#8594;</a>
+              <!-- arrow symbol learned from https://www.toptal.com/designers/htmlarrows/ -->
           </div>
         </div>
 

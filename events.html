@@ -1,13 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events</title>
-</head>
-<body>
-    <h1>this is the pb&j events page</h1>
-    
-</body>
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="icon" href="images/pbjlogo.png" sizes="300x300" />
+
+    <style>
+      body,
+      HTML {
+        background-color: #c5b0d2;
+      }
+      a .link {
+        color: red;
+        text-decoration: underline;
+      }
+
+      h1 {
+        color: #7a4081;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      h3 {
+        color: #a5634c;
+      }
+
+      h4 {
+        font-style: italic;
+      }
+
+      .events {
+        margin-left: 25vh;
+        margin-right: 25vh;
+        margin-bottom: 15vh;
+        margin-top: 20vh;
+      }
+
+      #todaysevent {
+        background-color: #7a4081;
+        padding: 15px;
+        border: 5px solid #f7f7f7;
+        color: #f7f7f7;
+        border-radius: 25px;
+        text-align: center;
+        animation: flash 1s linear infinite;
+        /* box-shadow: 0 0 10px #9ecaed; */
+      }
+
+      #todaysevent h3 {
+        color: #c5b0d2;
+      }
+
+      @keyframes flash {
+        0% {
+          border-color: rgba(255, 255, 255, 1);
+          background-color: blue;
+        }
+        50% {
+          border-color: rgba(255, 255, 255, 0);
+          background-color: pink;
+          font-size: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="item logo">
+        <a href="index.html"
+          ><img class="logo" src="images/pbjlogo.png" alt="pbj logo"
+        /></a>
+        <a href="index.html" class="pbj-index"
+          >Product, Building, &amp; Jammin&apos;</a
+        >
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="item"><a href="about.html">About</a></div>
+      <div class="item"><a href="events.html">Events</a></div>
+      <div class="item"><a href="gallery.html">Gallery</a></div>
+      <div class="item"><a href="resources.html">Resources</a></div>
+      <div class="item"><a href="contact.html">Contact</a></div>
+      <div class="item"><a href="sitemap.html">Sitemap</a></div>
+    </div>
+    <div class="events">
+      <h1>📆 Events Calendar</h1>
+      <h4>
+        Stay up to date with our
+        <a
+          href="https://babsonpbj.notion.site/PB-J-Homepage-9182c438b03443f48b60845c95f9d4f5#ccc1f3b928a24a31b9ad1fd97d854b13"
+          target="_blank"
+          class="link"
+          >Notion &#8594;</a
+        >
+      </h4>
+      <div id="todaysevent">
+        <h3>Today's Event:</h3>
+        <p id="result">""</p>
+      </div>
+
+      <div id="upcomingevents">
+        <h3>Upcoming Events:</h3>
+        <div id="event1">April 30, 2023 - Building Websites</div>
+        <div id="event2">
+          May 1, 2023 - Speaker Event with
+          <a
+            href="https://www.babson.edu/about/our-leaders-and-scholars/faculty-and-academic-divisions/faculty-profiles/zhi-li.php"
+            target="_blank"
+            class="link"
+            >Prof. Zhi Li</a
+          >
+        </div>
+        <div id="event3">
+          May 5, 2023 - Design Workshop Event with
+          <a
+            href="https://en.wikipedia.org/wiki/Vincent_van_Gogh"
+            target="_blank"
+            class="link"
+            >Prof. Van Gogh</a
+          >
+        </div>
+      </div>
+      <hr />
+      <div class="nextyr">
+        <h2>A sneak peak at next year...</h2>
+
+        <h4>Dates TBD</h4>
+        <h3>Fall 2023</h3>
+        <div>PB&amp;J Info Session</div>
+        <div>Cohort Application Opens</div>
+        <div>Cohort Applications Closes</div>
+        <div>Speaker Event with Google UX Designer</div>
+        <div>Workshop Event with Meta Programmer</div>
+
+        <h3>Spring 2024</h3>
+        <div>PB&amp;J at Spring Org Fair</div>
+        <div>Pb&amp;J&apos;s First Ever Design-a-thon</div>
+        <div>Speaker Event with Microsoft UI Designer</div>
+        <div>Workshop Event with PTC Product Manager</div>
+      </div>
+    </div>
+
+    <script>
+      function calendar() {
+        let todayeventEl = document.getElementById("result");
+        let today = new Date();
+        let event1El = document.getElementById("event1");
+        let event1 = new Date(2023, 3, 30);
+
+        let event2El = document.getElementById("event2");
+        let event2 = new Date(2023, 4, 1);
+
+        let event3El = document.getElementById("event3");
+        let event3 = new Date(2023, 4, 5);
+
+        if (event1.getDate() === today.getDate()) {
+          todayeventEl.textContent = event1El.textContent;
+        } else if (event2.getDate() === today.getDate()) {
+          todayeventEl.textContent = event2El.textContent;
+        } else if (event3.getDate() === today.getDate()) {
+          todayeventEl.textContent === event3El.textContent;
+        } else {
+          todayeventEl.textContent = "No events today :(";
+        }
+
+        console.log(today, event1, event2, event3);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        calendar();
+      });
+
+
+      let animationEl = document.getElementById("todaysevent");
+      function stop() {
+        animationEl.style.animation = "none";
+      }
+
+      animationEl.addEventListener("click", function () {
+        stop();
+      });
+
+      //help from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
+    </script>
+  </body>
 </html>
