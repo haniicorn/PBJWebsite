@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="description" content="Product, Bulding, and Jamming club at Babson College">
+    <meta name="keywords" content="Product Bulding and Jamming club, Babson College, technology entrepreneurship, product management, programming, product design">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +18,7 @@
         /* margin-top: 15vh; */
         text-align: center;
         justify-content: center;
+        height: 100vh;
       }
       .resource {
         padding: 5vh;
@@ -24,11 +27,12 @@
       .design {
         background-color: #c5b0d2;
         width: 100%;
-
       }
 
       .design h1 {
         color: #7a4081;
+        /* background-color: #c5b0d2;
+        border-radius: 25px; */
       }
 
       .programming {
@@ -38,6 +42,8 @@
 
       .programming h1 {
         color: #7f422c;
+        /* background-color: #d4a37f;
+        border-radius: 25px; */
       }
       img {
         height: 60vh;
@@ -50,7 +56,11 @@
     <div class="nav">
       <div class="item logo">
         <a href="index.html"
-          ><img class="logo" src="images/pbjlogo.png" alt="pbj logo"
+          ><img
+            class="logo"
+            src="images/pbjlogo.png"
+            alt="pbj logo"
+            loading="lazy"
         /></a>
         <a href="index.html" class="pbj-index"
           >Product, Building, &amp; Jammin&apos;</a
@@ -62,52 +72,160 @@
       <div class="item"><a href="about.html">About</a></div>
       <div class="item"><a href="events.html">Events</a></div>
       <div class="item"><a href="gallery.html">Gallery</a></div>
-      <div class="item"><a href="resources.html">Resources</a></div>
+      <div class="item active"><a href="resources.html">Resources</a></div>
       <div class="item"><a href="contact.html">Contact</a></div>
       <div class="item"><a href="sitemap.html">Sitemap</a></div>
     </div>
 
     <div class="container">
-      <div class="resource programming">
-        <h1>Programming Resources</h1>
+      <div class="resource programming" id="programming">
+        <h1 id="programminghead">Programming Resources</h1>
         <!-- <h4>Programming is</h4> -->
         <div id="peanutimg">
           <img
             src="images/peanut.png"
             alt="peanutbutter"
             title="peanutbutter"
+            id="peanutpic"
+            loading="lazy"
           />
         </div>
         <div id="presources">
-          <div>
+          <!-- <div>
             <a href="https://javascript30.com/">30 Days of JS Challenges</a>
           </div>
           <div>
             <a href="https://tutorial.djangogirls.org/en/">Django Girls</a>
           </div>
           <div>
-            <a href="https://github.com/pittcsc/Summer2023-Internships">Programming Internships</a>
-          </div>
+            <a href="https://github.com/pittcsc/Summer2023-Internships"
+              >Programming Internships</a
+            >
+          </div> -->
+          <h4>Click me!</h4>
         </div>
       </div>
-      <div class="resource design">
-        <h1>Design Resources</h1>
-        <!-- <h4>Design is</h4> -->
+      <div class="resource design" id="design">
+        <h1 id="designhead">Design Resources</h1>
+
         <div id="jellyimg">
-          <img src="images/jelly.png" alt="jelly" title="jelly" />
+          <img
+            src="images/jelly.png"
+            alt="jelly"
+            title="jelly"
+            id="jellypic"
+            loading="lazy"
+          />
         </div>
         <div id="dresources">
-          <div>
+          <!-- <div>
             <a href="https://www.designbuddies.community/">Design Buddies</a>
           </div>
-          <div><a href="https://docs.google.com/document/d/15PkJm4uJmaK5ehOoW0TnTaOVgDh9BJwOgpv9mYvBPpE/preview#">Olivia Trong's Design Starter Kit</a></div>
           <div>
-            <a href="https://github.com/m-deng1928/UX_Opportunities">Design Internships</a>
-
+            <a
+              href="https://docs.google.com/document/d/15PkJm4uJmaK5ehOoW0TnTaOVgDh9BJwOgpv9mYvBPpE/preview#"
+              >Olivia Trong's Design Starter Kit</a
+            >
           </div>
-
+          <div>
+            <a href="https://github.com/m-deng1928/UX_Opportunities"
+              >Design Internships</a
+            >
+          </div> -->
+          <h4>Click me!</h4>
         </div>
       </div>
     </div>
+
+    <script>
+      let peanutEl = document.getElementById("peanutimg");
+      let jellyEl = document.getElementById("jellyimg");
+      const programmingEl = document.getElementById("programming");
+      const designEl = document.getElementById("design");
+      const designHead = document.getElementById("designhead");
+      const programmingHead = document.getElementById("programminghead");
+      let dresources = document.getElementById("dresources");
+      let presources = document.getElementById("presources");
+
+      let dlinks =
+        '<a href="https://docs.google.com/document/d/15PkJm4uJmaK5ehOoW0TnTaOVgDh9BJwOgpv9mYvBPpE/preview#" >Olivia Trong&apos;s Design Starter Kit</a><br>';
+
+      dlinks +=
+        '<a href="https://javascript30.com/">30 Days of JS Challenges</a><br>';
+      dlinks +=
+        '<a href="https://github.com/m-deng1928/UX_Opportunities">Design Internships</a><br>';
+      dlinks += "<br> <strong>... and more to come!</strong>";
+
+      let plinks =
+        '<a href="https://javascript30.com/">30 Days of JS Challenges</a> <br>';
+      plinks +=
+        '<a href="https://tutorial.djangogirls.org/en/">Django Girls</a><br>';
+      plinks +=
+        '<a href="https://github.com/pittcsc/Summer2023-Internships">Programming Internships</a><br>';
+      plinks += "<br> <strong>... and more to come!</strong>";
+
+      let jellypic = document.getElementById("jellypic");
+      let peanutpic = document.getElementById("peanutpic");
+
+      // presources.innerHTML="";
+      // dresources.innerHTML="";
+
+      function peanut() {
+        designEl.style.backgroundColor = "#d4a37f";
+        designHead.innerHTML = "";
+        jellyEl.innerHTML = "";
+        dresources.innerHTML = plinks;
+      }
+
+      peanutEl.addEventListener("click", function () {
+        peanut();
+      });
+
+      function jelly() {
+        programmingEl.style.backgroundColor = "#c5b0d2";
+        programmingHead.innerHTML = "";
+        peanutEl.innerHTML = "";
+
+        presources.innerHTML = dlinks;
+      }
+
+      jellyEl.addEventListener("click", function () {
+        jelly();
+      });
+
+      function jellygrow() {
+        jellypic.style.width = "110%";
+        jellypic.style.height = "110%";
+      }
+
+      function jellyshrink() {
+        jellypic.style.width = "100%";
+        jellypic.style.height = "100%";
+      }
+
+      jellypic.addEventListener("mouseover", function () {
+        jellygrow();
+      });
+      jellypic.addEventListener("mouseout", function () {
+        jellyshrink();
+      });
+
+      function peanutgrow() {
+        peanutpic.style.width = "110%";
+        peanutpic.style.height = "110%";
+      }
+
+      function peanutshrink() {
+        peanutpic.style.width = "100%";
+        peanutpic.style.height = "100%";
+      }
+
+      peanutpic.addEventListener("mouseover", function () {
+        peanutgrow();
+      });
+      peanutpic.addEventListener("mouseout", function () {
+        peanutshrink();
+      });
+    </script>
   </body>
 </html>

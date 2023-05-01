@@ -53,8 +53,10 @@ a:hover {
   color: #7a4081;
 }
 
- #active {
-  color: #7a4081 !important;
+ .active {
+  background-color: #c5b0d2;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 

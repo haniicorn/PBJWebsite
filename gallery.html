@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="description" content="Product, Bulding, and Jamming club at Babson College">
+    <meta name="keywords" content="Product Bulding and Jamming club, Babson College, technology entrepreneurship, product management, programming, product design">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,10 +18,12 @@
       h1 {
         text-align: left;
         color: #7f422c;
+        margin-left: 5vh;
       }
 
-      h4{
+      h4 {
         font-style: italic;
+        margin-left: 5vh;
       }
 
       .container {
@@ -31,10 +35,11 @@
           "pic4 pic5 pic6";
         overflow: hidden;
 
-        padding: 5px;
+        /* padding: 5px; */
         margin-left: 5vh;
         margin-right: 5vh;
         flex-wrap: wrap;
+        justify-content: center;
       }
 
       .item2 img {
@@ -63,8 +68,41 @@
       .pic6 {
         grid-area: pic6;
       }
-      .desc{
+      .desc {
         grid-area: desc;
+      }
+      .slidescontainer {
+        margin-right: 5vh;
+        margin-left: 5vh;
+        margin-bottom: 5vh;
+        text-align: center;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: bold;
+        background-image: url(images/brown4.jpeg);
+        color: #f7f7f7;
+        border-radius: 35px;
+        padding: 5px;
+      }
+
+      .slide {
+        object-fit: contain;
+        padding: 8vh;
+        border-radius: 25px;
+      }
+
+      #slide {
+        border-radius: 35px;
+        border: 2px solid #7f422c;
+      }
+
+      button {
+        margin: 5vh;
+        background-color: #d4a37f;
+        color: #7f422c;
+        padding: 10px 15px 10px 15px;
+
+        border-radius: 10px;
       }
     </style>
   </head>
@@ -72,7 +110,11 @@
     <div class="nav">
       <div class="item logo">
         <a href="index.html"
-          ><img class="logo" src="images/pbjlogo.png" alt="pbj logo"
+          ><img
+            class="logo"
+            src="images/pbjlogo.png"
+            alt="pbj logo"
+            loading="lazy"
         /></a>
         <a href="index.html" class="pbj-index"
           >Product, Building, &amp; Jammin&apos;</a
@@ -83,35 +125,185 @@
 
       <div class="item"><a href="about.html">About</a></div>
       <div class="item"><a href="events.html">Events</a></div>
-      <div class="item"><a href="gallery.html">Gallery</a></div>
+      <div class="item active"><a href="gallery.html">Gallery</a></div>
       <div class="item"><a href="resources.html">Resources</a></div>
       <div class="item"><a href="contact.html">Contact</a></div>
       <div class="item"><a href="sitemap.html">Sitemap</a></div>
     </div>
 
-    <div class="container">
-      <div class="desc">
-        <h1>📸 Gallery</h1>
-        <h4>Past projects and events will be displayed here.</h4>
+    <div class="desc">
+      <h1>📸 Gallery</h1>
+      <h4>Past projects and events will be displayed here.</h4>
+    </div>
+    <!-- slideshow -->
+    <div class="slidescontainer">
+      <div class="slide">
+        <img
+          id="slide"
+          src="images/pbjpic1.jpg"
+          alt="product building jamming"
+          title="product building jamming"
+          width="500px"
+          height="300px"
+          loading="lazy"
+        />
       </div>
+      <div id="caption">PB&amp;J's first ever meeting!</div>
+
+      <!-- <div class="slide">
+    <img src="images/pbjpic2.jpg" alt="product building jamming" title="product building jamming">
+  </div>
+  <div class="caption">
+    <p>Speaker event with Allan Maman, the inventor of figet spinners and Bloom.</p>
+  </div>
+
+  <div class="slide">
+    <img src="images/pbjpic3.jpg" alt="product building jamming" title="product building jamming">
+  </div>
+  <div class="caption">
+    <p>PB&amp;J Cohort members bonding over building bread-tastic structures</p>
+  </div>
+
+  <div class="slide">
+    <img src="images/pbjpic4.jpg" alt="product building jamming" title="product building jamming">
+  </div>
+  <div class="caption">
+    <p>PB&amp;J Cohort members bonding over building bread-tastic structures</p>
+  </div>
+
+  <div class="slide">
+    <img src="images/pbjpic5.jpg" alt="product building jamming" title="product building jamming">
+  </div>
+  <div class="caption">
+    <p>Programming workshop event with Ahn Thu, the creator of Sebela App</p>
+  </div>
+
+  <div class="slide">
+    <img src="images/pbjpic7.jpg" alt="product building jamming" title="product building jamming">
+  </div>
+  <div class="caption">
+    <p>Cohort members showing off their final projects during our end-of-semester Demo Day!</p>
+  </div>
+
+  <div class="slide">
+    <img src="images/pbj-team-pic.png" alt="product building jamming" title="product building jamming">
+  </div>
+  <div class="caption">
+    <p>Meet the cohfounding team behind PB&amp;J: Hannah Zhu, Annie Zhang, Sabrina Eng, and Eva Lee.</p>
+  </div> -->
+
+      <!-- slideshow buttons -->
+      <button id="left-btn">&#8592;</button>
+      <button id="right-btn">&#8594;</button>
+    </div>
+
+    <!-- grid gallery -->
+    <div class="container">
       <div class="item2 pic1">
-        <img src="images/pbjpic1.jpg" alt="pbj" title="Workshop Day" />
+        <img
+          src="images/pbjpic1.jpg"
+          alt="pbj"
+          title="Workshop Day"
+          loading="lazy"
+        />
       </div>
       <div class="item2 pic2">
-        <img src="images/pbjpic2.jpg" alt="pbj" title="Workshop Day" />
+        <img
+          src="images/pbjpic2.jpg"
+          alt="pbj"
+          title="Workshop Day"
+          loading="lazy"
+        />
       </div>
       <div class="item2 pic3">
-        <img src="images/pbjpic3.jpg" alt="pbj" title="Workshop Day" />
+        <img
+          src="images/pbjpic3.jpg"
+          alt="pbj"
+          title="Workshop Day"
+          loading="lazy"
+        />
       </div>
       <div class="item2 pic4">
-        <img src="images/pbjpic4.jpg" alt="pbj" title="Workshop Day" />
+        <img
+          src="images/pbjpic4.jpg"
+          alt="pbj"
+          title="Workshop Day"
+          loading="lazy"
+        />
       </div>
       <div class="item2 pic5">
-        <img src="images/pbjpic5.jpg" alt="pbj" title="Workshop Day" />
+        <img
+          src="images/pbjpic5.jpg"
+          alt="pbj"
+          title="Workshop Day"
+          loading="lazy"
+        />
       </div>
       <div class="item2 pic6">
-        <img src="images/pbjpic6.jpg" alt="pbj" title="Workshop Day" />
+        <img
+          src="images/pbjpic6.jpg"
+          alt="pbj"
+          title="Workshop Day"
+          loading="lazy"
+        />
       </div>
     </div>
+
+    <script>
+      let slidesEl = document.getElementById("slide");
+      let captionEl = document.getElementById("caption");
+      let rightbuttonEl = document.getElementById("right-btn");
+      let leftbuttonEl = document.getElementById("left-btn");
+
+      const slides = [
+        "images/pbjpic1.jpg",
+        "images/pbjpic2.jpg",
+        "images/pbjpic3.jpg",
+        "images/pbjpic4.jpg",
+        "images/pbjpic5.jpg",
+        "images/pbjpic7.jpg",
+        "images/pbj-team-pic.png",
+      ];
+      const caption = [
+        "PB&amp;J's first ever meeting!",
+        "Speaker event with Allan Maman, the inventor of figet spinners and Bloom.",
+        "PB&amp;J Cohort members bonding over building bread-tastic structures",
+        "PB&amp;J Cohort members pitching their peanut butter and jelly creations",
+        "Programming workshop event with Ahn Thu, the creator of Sebela App",
+        "Cohort members showing off their final projects during our end-of-semester Demo Day!",
+        "Meet the cohfounding team behind PB&amp;J: Hannah Zhu, Annie Zhang, Sabrina Eng, and Eva Lee.",
+      ];
+
+      let index = 0;
+      console.log(index);
+      console.log(slides, caption);
+
+      function slideshow() {
+        slidesEl.src = slides[index];
+        captionEl.innerHTML = caption[index];
+        index++;
+
+        if (index === slides.length) {
+          index = 0;
+        }
+      }
+      rightbuttonEl.addEventListener("click", function () {
+        slideshow();
+      });
+
+      function slideshowBack() {
+        index--;
+
+        if (index < 0) {
+          index = slides.length - 1;
+        }
+        slidesEl.src = slides[index];
+        captionEl.innerHTML = caption[index];
+        console.log(index);
+      }
+      leftbuttonEl.addEventListener("click", function () {
+        slideshowBack();
+      });
+    </script>
   </body>
 </html>
